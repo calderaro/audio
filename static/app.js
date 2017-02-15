@@ -17,7 +17,7 @@ next.addEventListener('click', () => {
   audio.play()
 })
 next1.addEventListener('click', () => {
-  audio.src = '/static/01.mp3'
+  audio.src = '/static/track01.mp3'
   audio.play()
 })
 
