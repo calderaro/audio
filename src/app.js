@@ -8,4 +8,4 @@ app
   .use(morgan('dev'))
   .use('/static', express.static(path.join(__dirname, '../static')))
   .get('/', (req, res) => res.sendFile(path.join(__dirname, './index.html')))
-  .listen(3006, err => console.log(err || 'Listening at port 3000 in production'))
+  .listen(3006, err => console.log(err || 'running at http://localhost:3006/'))

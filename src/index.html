@@ -1,12 +1,11 @@
 <html>
   <body>
-    <button id='play'>Play</button>
+    <button id='play'>Play and Next</button>
     <button id='pause'>Pause</button>
-    <button id='next'>Fonoteca remoto</button>
-    <button id='next1'>Fonoteca local</button>
-    <audio autoplay preload controls>
-      <source type="audio/mpeg">
-    </audio>
+    <div id='name'></div>
+    <audio autoplay preload controls></audio>
+    <div id='error'></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="/static/app.js"></script>
   </body>
 </html>
