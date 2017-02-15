@@ -35,10 +35,19 @@ function load (track, audio, name) {
     headers: {Accept:'audio/mpeg'}
   })
   .then((res) => {
+    console.log(res)
     error.innerHTML = ''
     name.innerHTML = track
     audio.src = URL.createObjectURL(res.data)
     audio.play()
+    jsmediatags.read(res.data, {
+      onSuccess: function(tag) {
+        console.log('metadata ',tag);
+      },
+      onError: function(error) {
+        console.log(':( error! ', error.type, error.info);
+      }
+    })
   })
   .catch((error) => {
     const x = error.response && error.response.status || error.status || 'network'
